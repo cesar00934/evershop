@@ -8,12 +8,11 @@
     "extensions/*"
   ],
   "scripts": {
-    "dev": "node ./packages/evershop/dist/bin/dev/index.js",
-    "start": "node ./packages/evershop/dist/bin/start/index.js",
+  "dev": "node packages/evershop/dist/bin/dev/index.js",
+  "start": "node -r dotenv/config packages/evershop/dist/bin/start/index.js",
     "build": "node ./packages/evershop/dist/bin/build/index.js",
     "build-fast": "evershop build -- --skip-minify",
-    "setup": "evershop install",
-    "theme:active": "evershop theme:active",
+      "theme:active": "evershop theme:active",
     "theme:twizz": "evershop theme:twizz",
     "theme:create": "evershop theme:create",
     "compile": "rimraf ./packages/evershop/dist && cd ./packages/evershop && swc ./src/ -d dist/ --config-file .swcrc --copy-files --strip-leading-paths",
@@ -55,6 +54,7 @@
   "dependencies": {
     "@types/react-slick": "^0.23.13",
     "@types/uuid": "^10.0.0",
+    "dotenv": "^17.2.3",
     "uuid": "^13.0.0"
   }
 }
