@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: evershop
+    env: node
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: postgresql://postgres:fthtnrytm6um56u@db.ectxtvowuwikfoosczei.supabase.co:5432/postgres
+      - key: DB_PORT
+        value: 5432
+      - key: DB_NAME
+        value: postgres
+      - key: DB_USER
+        value: postgres
+      - key: DB_PASSWORD
+        value: fthtnrytm6um56u
+      - key: APP_URL
+        value: https://TU-SERVICIO.onrender.com
+      - key: ADMIN_URL
+        value: https://TU-SERVICIO.onrender.com/admin
+      - key: JWT_SECRET
+        value: 34b10172a1613ece77c342a7e7b6b9db86c99e5ebaec9ea4b0204e71b50d00a5ac71bad276bd9e764caa04b3b9307c98b72f883dc6e2be8462a604940de6af9c
+      - key: SESSION_SECRET
+        value: e079266215b0b604b86a3fa9a15b8029c23d0f8bec8647359375846fc07c6cdbb9f0b2f3e4de7d63765f7bd27d6b98fbe8cef510777743cdaa51f695c7e19701
