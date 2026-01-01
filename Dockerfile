@@ -3,18 +3,10 @@ FROM node:18
 
 WORKDIR /app
 
-# 1️⃣ Copiar package.json PRIMERO
-COPY package*.json ./
 
 # 2️⃣ Instalar dependencias
 RUN npm install
 
-# 3️⃣ Copiar el resto del proyecto
-COPY packages ./packages
-COPY public ./public
-COPY themes ./themes
-COPY extensions ./extensions
-COPY translations ./translations
 
 # (NO copies media ni config si no existen)
 
