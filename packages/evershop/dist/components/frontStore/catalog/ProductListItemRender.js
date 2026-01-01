@@ -18,8 +18,7 @@ export const ProductListItemRender = ({ product, imageWidth, imageHeight, layout
             width: imageWidth || 120,
             height: imageHeight || 120,
             loading: "lazy",
-            sizes: "(max-width: 768px) 100vw, 33vw" // Assume 3 columns on larger screens
-            ,
+            sizes: "(max-width: 768px) 100vw, 33vw",
             className: "transition-transform duration-300 ease-in-out group-hover:scale-105 rounded-lg"
         }), !product.image && /*#__PURE__*/ React.createElement(ProductNoThumbnail, {
             width: imageWidth,
@@ -99,8 +98,7 @@ export const ProductListItemRender = ({ product, imageWidth, imageHeight, layout
         alt: product.image.alt || product.name,
         width: imageWidth || 120,
         height: imageHeight || 120,
-        sizes: "(max-width: 768px) 100vw, 33vw" // Assume 3 columns on larger screens
-        ,
+        sizes: "(max-width: 768px) 100vw, 33vw",
         className: "transition-transform duration-500 ease-in-out group-hover:scale-110"
     }), !product.image && /*#__PURE__*/ React.createElement(ProductNoThumbnail, {
         width: imageWidth,
