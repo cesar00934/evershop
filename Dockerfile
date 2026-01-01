@@ -1,20 +1,19 @@
-
 FROM node:18
 
 WORKDIR /app
 
+# copiar package.json y package-lock.json (si existe) ANTES de instalar
+COPY package*.json ./
 
-# 2️⃣ Instalar dependencias
+# instalar dependencias
 RUN npm install
 
+# copiar el resto del proyecto
+COPY . .
 
-# (NO copies media ni config si no existen)
+# construir (si tu proyecto tiene script build/compile)
+RUN npm run compile && npm run compile:db
 
-# 4️⃣ Build
-RUN npm run build
-
-# 5️⃣ Puerto
 EXPOSE 3000
 
-# 6️⃣ Start
 CMD ["node", "-r", "dotenv/config", "packages/evershop/dist/bin/start/index.js"]
