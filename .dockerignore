@@ -1,0 +1,36 @@
+# Dependencias locales
+node_modules
+
+# Git y editor
+.git
+.gitignore
+.idea
+.vscode
+
+# Variables de entorno
+.env
+.env.*
+.evershop
+
+# Logs y basura
+npm-debug.log
+.log
+.DS_Store
+coverage
+cypress
+.turbo
+
+# Docs y scripts no necesarios en runtime
+/docs
+mysqlToPostgres.js
+
+# Archivos de formato
+.prettierignore
+.prettierrc
+
+# Configuración local (Render usa env vars)
+
+
+# Build local (se genera dentro del contenedor)
+dist
+build

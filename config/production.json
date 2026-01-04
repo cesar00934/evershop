@@ -1,0 +1,17 @@
+{
+  "database": {
+    "provider": "postgres",
+    "postgres": {
+      "connection": {
+        "host": "aws-1-us-east-2.pooler.supabase.com",
+        "port": 5432,
+        "user": "postgres",
+        "password": "fthtnrytm6um56u",
+        "database": "postgres",
+        "ssl": {
+          "rejectUnauthorized": false
+        }
+      }
+    }
+  }
+}
